@@ -34,10 +34,10 @@ for (k in ntrial){
           meta1 <- metabin(Xe, Ne, Xc, Nc, data=dat, sm="OR", method="Inverse", method.tau = "DL") 
           meta2 <- metabin(Xe, Ne, Xc, Nc, data=dat, sm="ASD", method="Inverse") 
           
-          rank.pval <- metabias(meta1,method.bias="rank",k.min=5)$p.value # begg's
-          linreg.pval <- metabias(meta1,method.bias="linreg",k.min=5)$p.value # egger's
-          count.pval <- metabias(meta1,method.bias="count",k.min=5)$p.value # Schwarzer's
-          thom.pval <- metabias(meta2,method.bias="mm",k.min=5)$p.value # Thompson's
+          rank.pval <- metabias(meta1,method.bias="rank",k.min=5)$p.value # Begg's test
+          linreg.pval <- metabias(meta1,method.bias="linreg",k.min=5)$p.value # Egger's test
+          count.pval <- metabias(meta1,method.bias="count",k.min=5)$p.value # Schwarzer's test
+          thom.pval <- metabias(meta2,method.bias="mm",k.min=5)$p.value # arcsine-Thompson's test
           
           # define y and s2
           y <- dat$logORi
