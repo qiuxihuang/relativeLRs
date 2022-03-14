@@ -1,4 +1,4 @@
-#fuction generating k selected trials using copas model
+#fuction generating k selected trials using Copas and Shi's model
 gen_meta<-function(k,true_OR, tau2,rho){
   base <- data.frame(matrix(nrow=k, ncol=21)) 
   names(base)<-c("N.tmp", "Ne", "Nc","eta","p","logitp","logitpe","logitpc","Pe","Pc","Xe","Xc","Ye","Yc","logORi","s2","sigma2","u","prob","sel","trzero")
