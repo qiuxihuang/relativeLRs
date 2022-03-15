@@ -7,7 +7,7 @@ true_or <- c(0.25,0.5,0.67,1)
 Tau2 <- c(0,0.05,0.25)
 Rho <- c(0)
 
-n <- 20000
+n <- 50000
 
 size <- matrix(NA,ncol=9)
 size <- as.data.frame(size)
