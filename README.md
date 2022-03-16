@@ -14,7 +14,7 @@ R function used to perform Lin and Chu's skewness-regression combined test
 ```
 1_sim_meta.R
 ```
-R code used to generate data with _n_ repetitions 
+R code used to generate data with n repetitions 
 ```
 2_pp_ap_lrs.R
 ```
@@ -22,15 +22,15 @@ R function used to calculate penalized power, adjusted power, and likelihood rat
 ```
 3_compile_rslts.R
 ```
-R code used to compile all simulations results 
+R code used to compile all simulation results 
 ```
 3_write_scenarios.R
 ```
-R code used to generate table of all considered scenarios 
+R code used to summarizing all considered scenarios in a table
 ```
 4_for_plots.R
 ```
-R code used to prepare results for plots
+R code used to prepare simulation results for making plots
 ```
 5_gen_plots.R
 ```
@@ -52,7 +52,7 @@ R function used to perform Lin and Chu's skewness-regression combined test
 ```
 1_sim_meta.R
 ```
-R code used to generate data with _5000_ repetitions
+R code used to generate data with 5000 repetitions
 2_pp_ap_lrs.R
 ```
 R function used to calculate penalized power, adjusted power, and likelihood ratios 
