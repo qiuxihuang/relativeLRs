@@ -5,7 +5,7 @@ setwd("...") # set your working directory
 
 # size, power, penalized power, adjusted power, positive and negative likelihood ratios
 # read-in results
-plotbase <- read.csv("C:/Users/danty/Desktop/adjp_lr/simulations/plot_lrs_penpow_adjpow.csv",header=TRUE, sep=",")
+plotbase <- read.csv("plot_lrs_penpow_adjpow.csv",header=TRUE, sep=",")
 base0 <- plotbase[plotbase$rho==0,]
 base06 <- plotbase[plotbase$rho==-0.6,]
 base1 <- plotbase[plotbase$rho==-1,]
@@ -52,7 +52,7 @@ f1=
   theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),axis.text.x=element_text(angle=-90))
 
 dev.new()
-pdf("C:/Users/danty/Desktop/adjp_lr/output/figure_rho0.pdf",width=6.9,height=5.9)
+pdf("figure_rho0.pdf",width=6.9,height=5.9)
 print(f1)
 dev.off()
 
@@ -70,7 +70,7 @@ f1=
   theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),axis.text.x=element_text(angle=-90))
 
 dev.new()
-pdf("C:/Users/danty/Desktop/adjp_lr/output/figure_rho06_pow.pdf",width=6.9,height=5.9)
+pdf("figure_rho06_pow.pdf",width=6.9,height=5.9)
 print(f1)
 dev.off()
 
@@ -88,7 +88,7 @@ f1=
   theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),axis.text.x=element_text(angle=-90))
 
 dev.new()
-pdf("C:/Users/danty/Desktop/adjp_lr/output/figure_rho06_pen_pow.pdf",width=6.9,height=5.9)
+pdf("figure_rho06_pen_pow.pdf",width=6.9,height=5.9)
 print(f1)
 dev.off()
 
@@ -106,7 +106,7 @@ f1=
   theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),axis.text.x=element_text(angle=-90))
 
 dev.new()
-pdf("C:/Users/danty/Desktop/adjp_lr/output/figure_rho06_adj_pow.pdf",width=6.9,height=5.9)
+pdf("figure_rho06_adj_pow.pdf",width=6.9,height=5.9)
 print(f1)
 dev.off()
 
@@ -139,7 +139,7 @@ f2=
   theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),axis.text.x=element_text(angle=-90),legend.position = "bottom")
 
 dev.new()
-pdf("C:/Users/danty/Desktop/adjp_lr/output/figure_rho06_lr.pdf",width=13.8,height=5.9)
+pdf("figure_rho06_lr.pdf",width=13.8,height=5.9)
 grid.newpage()
 pushViewport(viewport(layout = grid.layout(1, 2)))
 print(f1, vp = vplayout(1, 1))
@@ -160,7 +160,7 @@ f1=
   theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),axis.text.x=element_text(angle=-90))
 
 dev.new()
-pdf("C:/Users/danty/Desktop/adjp_lr/output/figure_rho1_pow.pdf", width=6.9,height=5.9)
+pdf("figure_rho1_pow.pdf", width=6.9,height=5.9)
 print(f1)
 dev.off()
 
@@ -178,7 +178,7 @@ f1=
   theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),axis.text.x=element_text(angle=-90))
 
 dev.new()
-pdf("C:/Users/danty/Desktop/adjp_lr/output/figure_rho1_pen_pow.pdf", width=6.9,height=5.9)
+pdf("figure_rho1_pen_pow.pdf", width=6.9,height=5.9)
 print(f1)
 dev.off()
 
@@ -195,7 +195,7 @@ f1=
   theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),axis.text.x=element_text(angle=-90))
 
 dev.new()
-pdf("C:/Users/danty/Desktop/adjp_lr/output/figure_rho1_adj_pow.pdf", width=6.9,height=5.9)
+pdf("figure_rho1_adj_pow.pdf", width=6.9,height=5.9)
 print(f1)
 dev.off()
 
@@ -228,7 +228,7 @@ f2=
   theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),axis.text.x=element_text(angle=-90),legend.position = "bottom")
 
 dev.new()
-pdf("C:/Users/danty/Desktop/adjp_lr/output/figure_rho1_lr.pdf", width=13.8,height=5.9)
+pdf("figure_rho1_lr.pdf", width=13.8,height=5.9)
 grid.newpage()
 pushViewport(viewport(layout = grid.layout(1, 2)))
 print(f1, vp = vplayout(1, 1))
@@ -239,7 +239,7 @@ dev.off()
 
 # relative positive and negative likelihood ratios
 # read-in results
-plotbase2 <- read.csv("C:/Users/danty/Desktop/adjp_lr/simulations/plot_rlrs.csv",header=TRUE, sep=",")
+plotbase2 <- read.csv("plot_rlrs.csv",header=TRUE, sep=",")
 base0_2 <- plotbase2[plotbase2$rho==0,]
 base06_2 <- plotbase2[plotbase2$rho==-0.6,]
 base1_2 <- plotbase2[plotbase2$rho==-1,]
@@ -289,7 +289,7 @@ f2=
   theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),axis.text.x=element_text(angle=-90),legend.position = "bottom")
 
 dev.new()
-pdf("C:/Users/danty/Desktop/adjp_lr/output/figure_rho06_rlr.pdf", width=13.8,height=5.9)
+pdf("figure_rho06_rlr.pdf", width=13.8,height=5.9)
 grid.newpage()
 pushViewport(viewport(layout = grid.layout(1, 2)))
 print(f1, vp = vplayout(1, 1))
@@ -324,7 +324,7 @@ f2=
   theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),axis.text.x=element_text(angle=-90),legend.position = "bottom")
 
 dev.new()
-pdf("C:/Users/danty/Desktop/adjp_lr/output/figure_rho1_rlr.pdf", width=13.8,height=5.9)
+pdf("figure_rho1_rlr.pdf", width=13.8,height=5.9)
 grid.newpage()
 pushViewport(viewport(layout = grid.layout(1, 2)))
 print(f1, vp = vplayout(1, 1))
