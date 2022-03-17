@@ -27,10 +27,6 @@ R function used to calculate penalized power, adjusted power, and likelihood rat
 ```
 R code used to compile all simulation results. Nominal level is set at 0.1. 
 ```
-3_write_scenarios.R
-```
-R code used to summarizing all considered scenarios in a table.
-```
 4_for_plots.R
 ```
 R code used to prepare simulation results for making plots.
