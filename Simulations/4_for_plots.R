@@ -2,10 +2,10 @@ library(dplyr)
 library(plyr)
 setwd("...") # set your working directory
 
-n <- 20000
+n <- 50000
 
-res <- read.csv(paste0("C:/Users/danty/Desktop/adjp_lr/simulations/sim_", n, "_results.csv"), header=T, sep=",")
-scenarios <- read.csv(paste0("C:/Users/danty/Desktop/adjp_lr/simulations/table_scenarios.csv"), header=T, sep=",")
+res <- read.csv(paste0("sim_", n, "_results.csv"), header=T, sep=",")
+scenarios <- read.csv(paste0("table_scenarios.csv"), header=T, sep=",")
 
 # Begg's test
 rank.all <- scenarios %>% left_join(res[,c('k','true_OR','tau2','rho','rank.size','rank.power','rank.adj_pow','rank.pen_pow','rank.plr','rank.nlr')],by=c("k", "true_OR", "tau2", "rho"))
@@ -39,7 +39,7 @@ tf.all$test <- "tf"
 
 # output results
 results <- rbind(rank.all,linreg.all,count.all,thom.all,tf.all,comb.all)
-write.csv(results, "C:/Users/danty/Desktop/adjp_lr/simulations/plot_lrs_penpow_adjpow.csv", row.names=FALSE)
+write.csv(results, "plot_lrs_penpow_adjpow.csv", row.names=FALSE)
 
 # relative positive and negative likelihood ratios
 rankcount <- scenarios %>% left_join(res[,c('k','true_OR','tau2','rho','rank.plr','rank.nlr','count.plr','count.nlr')],by=c("k", "true_OR", "tau2", "rho"))
@@ -69,4 +69,4 @@ combcount$rnlr <- combcount$comb.nlr/combcount$count.nlr
 
 # output results
 results2 <- rbind.fill(rankcount, linregcount, tfcount, thomcount, combcount)
-write.csv(results2, "C:/Users/danty/Desktop/adjp_lr/simulations/plot_rlrs.csv", row.names=FALSE)
+write.csv(results2, "plot_rlrs.csv", row.names=FALSE)
