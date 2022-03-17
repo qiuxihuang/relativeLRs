@@ -53,7 +53,7 @@ R function used to perform the trim-and-fill test.
 ```
 R function used to perform Lin and Chu's skewness-regression combined test. 
 ```
-1_sim_meta.R
+1_sim_sample_size.R
 ```
 R code used to perform 6 different tests for small-study effects on generated meta-analyses and output p-values with a smaller sample size. Scenarios can be defined at line 14-17. Number of repetitions can be specified at line 19. 
 ```
