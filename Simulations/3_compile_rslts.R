@@ -89,28 +89,28 @@ for (k in ntrial){
 write.csv(power,file=paste0("power_", n, "_results.csv"), row.names = F)
 
 allrslts <- power %>% left_join(size,by=c("k", "true_OR", "tau2"))
-
+# penalized power
 allrslts$rank.pen_pow <- pen.pow(allrslts$rank.power,allrslts$rank.size)
 allrslts$linreg.pen_pow <- pen.pow(allrslts$linreg.power,allrslts$linreg.size)
 allrslts$count.pen_pow <- pen.pow(allrslts$count.power,allrslts$count.size)
 allrslts$thom.pen_pow <- pen.pow(allrslts$thom.power,allrslts$thom.size)
 allrslts$comb.pen_pow <- pen.pow(allrslts$comb.power,allrslts$comb.size)
 allrslts$tf.pen_pow <- pen.pow(allrslts$tf.power,allrslts$tf.size)
-
+# adjusted power 
 allrslts$rank.adj_pow <- adj.pow(allrslts$rank.power,allrslts$rank.size)
 allrslts$linreg.adj_pow <- adj.pow(allrslts$linreg.power,allrslts$linreg.size)
 allrslts$count.adj_pow <- adj.pow(allrslts$count.power,allrslts$count.size)
 allrslts$thom.adj_pow <- adj.pow(allrslts$thom.power,allrslts$thom.size)
 allrslts$comb.adj_pow <- adj.pow(allrslts$comb.power,allrslts$comb.size)
 allrslts$tf.adj_pow <- adj.pow(allrslts$tf.power,allrslts$tf.size)
-
+# positive likelihood ratio
 allrslts$rank.plr <- plr(allrslts$rank.power,allrslts$rank.size)
 allrslts$linreg.plr <- plr(allrslts$linreg.power,allrslts$linreg.size)
 allrslts$count.plr <- plr(allrslts$count.power,allrslts$count.size)
 allrslts$thom.plr <- plr(allrslts$thom.power,allrslts$thom.size)
 allrslts$comb.plr <- plr(allrslts$comb.power,allrslts$comb.size)
 allrslts$tf.plr <- plr(allrslts$tf.power,allrslts$tf.size)
-
+# negative likelihood ratio
 allrslts$rank.nlr <- nlr(allrslts$rank.power,allrslts$rank.size)
 allrslts$linreg.nlr <- nlr(allrslts$linreg.power,allrslts$linreg.size)
 allrslts$count.nlr <- nlr(allrslts$count.power,allrslts$count.size)
