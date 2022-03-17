@@ -55,7 +55,7 @@ for (k in ntrial){
           colnames(rslts) <- c('rank.pval','linreg.pval','count.pval','thom.pval','tf.pval','comb.pval')
         }
         write.table(rslts, file =
-                      paste0("pval_n_", n, "_k_", k, "_OR_", OR, "_tau2_", tau2, "_rho_", rho, 
+                      paste0("simulations/pval_n_", n, "_k_", k, "_OR_", OR, "_tau2_", tau2, "_rho_", rho, 
                              ".txt", sep = ""), row.names = FALSE)
       }
     }
