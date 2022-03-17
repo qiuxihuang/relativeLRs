@@ -1,5 +1,5 @@
 In this project, we share R code to conduct Monte Carlo simulation studies to compare 6 different tests for small-study effects: 
-Begg’s rank correlation test, Egger’s regression test, Schwarzer’s rank correlation test, the trim-and-fill test, the arcsine-Thompson test, and the skewness-regression combined test introduced by Lin and Chu. We also share code to jusitify the minimum required number of repetitions in our simulations to obtain a desired level of relative precision (10%) on the relative positive and negative likelihood ratios. 
+Begg’s rank correlation test, Egger’s regression test, Schwarzer’s rank correlation test, the trim-and-fill test, the arcsine-Thompson test, and the skewness-regression combined test introduced by Lin and Chu. We also share code to jusitify the minimum required number of repetitions in our simulations to obtain a desired level of precision on the relative positive and negative likelihood ratios. 
 
 ### Simulations
 
