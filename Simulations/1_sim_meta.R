@@ -5,9 +5,9 @@ library("meta") # an older version of the "meta" package is used
 library("metafor")
 
 setwd("...") # set your working directory
-source("gen_meta.R")
-source("skewtest.R")
-source("tnf.R")
+source("0_gen_meta.R")
+source("0_skewtest.R")
+source("0_tnf.R")
 
 # Monte Carlo simulation
 set.seed(123456)
@@ -16,7 +16,7 @@ true_or <- c(0.25,0.5,0.67,1) # 0.25,0.5,0.67,1
 Tau2 <- c(0,0.05,0.25) #0,0.05,0.25
 Rho <- c(0,-0.6,-1) #0,-0.6,-1
 
-n <- 20000
+n <- 50000
 
 for (k in ntrial){
   for (OR in true_or){
