@@ -1,13 +1,13 @@
 library(dplyr)
 setwd("...") # set your working directory
-source("pp_ap_lrs.R")
+source("2_pp_ap_lrs.R")
 
 ntrial <- c(5,10,20,50)
 true_or <- c(0.25,0.5,0.67,1)
 Tau2 <- c(0,0.05,0.25)
 Rho <- c(0)
 
-n <- 20000
+n <- 50000
 
 size <- matrix(NA,ncol=9)
 size <- as.data.frame(size)
@@ -23,7 +23,7 @@ for (k in ntrial){
         
         rslts <- read.table(paste0("pval_n_", n, "_k_", k, "_OR_", OR, "_tau2_", tau2, "_rho_", rho, 
                                    ".txt"), header=T, sep="")
-        
+        # set nominal = 0.1
         rank.size.di<-ifelse(rslts$rank.pval<0.1,1,0)
         linreg.size.di<- ifelse(rslts$linreg.pval<0.1,1,0)
         count.size.di<- ifelse(rslts$count.pval<0.1,1,0)
@@ -64,7 +64,7 @@ for (k in ntrial){
         
         rslts <- read.table(paste0("pval_n_", n, "_k_", k, "_OR_", OR, "_tau2_", tau2, "_rho_", rho, 
                                    ".txt"), header=T, sep="")
-        
+        # set nominal = 0.1
         rank.power.di<-ifelse(rslts$rank.pval<0.1,1,0)
         linreg.power.di<- ifelse(rslts$linreg.pval<0.1,1,0)
         count.power.di<- ifelse(rslts$count.pval<0.1,1,0)
