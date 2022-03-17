@@ -2,7 +2,7 @@ library(dplyr)
 library(plyr)
 setwd("...") # set your working directory
 
-n <- 50000
+n <- 55000
 
 res <- read.csv(paste0("sim_", n, "_results.csv"), header=T, sep=",")
 scenarios <- read.csv(paste0("table_scenarios.csv"), header=T, sep=",")
