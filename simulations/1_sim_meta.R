@@ -5,9 +5,9 @@ library("meta") # an older version of the "meta" package is used
 library("metafor")
 
 setwd("...") # set your working directory
-source("gen_meta.R")
-source("skewtest.R")
-source("tnf.R")
+source("0_gen_meta.R")
+source("0_skewtest.R")
+source("0_tnf.R")
 
 # Monte Carlo simulation
 set.seed(123456)
