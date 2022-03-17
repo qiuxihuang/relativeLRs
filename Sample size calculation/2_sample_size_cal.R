@@ -20,7 +20,7 @@ for (k in ntrial){
     for (tau2 in Tau2){
       for (rho in Rho){
         
-        rslts <- read.table(paste0("pval_n_", n, "_k_", k, "_OR_", OR, "_tau2_", tau2, "_rho_", rho, 
+        rslts <- read.table(paste0("simulations/pval_n_", n, "_k_", k, "_OR_", OR, "_tau2_", tau2, "_rho_", rho, 
                                    ".txt"), header=T, sep="")
         # set nominal = 0.1
         rank.power.di<-ifelse(rslts$rank.pval<0.1,1,0)
@@ -53,7 +53,7 @@ for (k in ntrial){
         rho0 <- 0
         
         
-        rslts <- read.table(paste0("pval_n_", n, "_k_", k, "_OR_", OR, "_tau2_", tau2, "_rho_", rho0, 
+        rslts <- read.table(paste0("simulations/pval_n_", n, "_k_", k, "_OR_", OR, "_tau2_", tau2, "_rho_", rho0, 
                                    ".txt"), header=T, sep="")
         # set nominal = 0.1
         rank.size.di<-ifelse(rslts$rank.pval<0.1,1,0)
