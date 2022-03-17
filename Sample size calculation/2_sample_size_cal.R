@@ -1,5 +1,6 @@
 setwd("...") # set your working directory
 source("1_pp_ap_lrs.R")
+source("2_n_log_fxn.R")
 
 n <- 5000
 
@@ -168,26 +169,9 @@ for (i in 1:nrow(res)){
   deltaplus <- rplr*0.1
   deltaminus <- rnlr*0.1
   
-  dplus <- dminus <- 999
-  nplus_log <- nminus_log <- 0
-  vplus <- lplus <- uplus <- 0
-  vminus <- lminus <- uminus <- 0
-  
-  while (dplus>deltaplus){
-    nplus_log <- nplus_log+100
-    vplus <- 1/nplus_log*((powera+powerb-2*tpf)/(powera*powerb)+(sizea+sizeb-2*fpf)/(sizea*sizeb))
-    lplus <- log(rplr)-1.96*sqrt(vplus)
-    uplus <- log(rplr)+1.96*sqrt(vplus)
-    dplus <- (exp(uplus)-exp(lplus))/2
-  }
-  
-  while (dminus>deltaminus){
-    nminus_log <- nminus_log+100
-    vminus <- 1/nminus_log*((powera+powerb-2*tpf)/(betaa*betab)+(sizea+sizeb-2*fpf)/((1-sizea)*(1-sizeb)))
-    lminus <- log(rnlr)-1.96*sqrt(vminus)
-    uminus <- log(rnlr)+1.96*sqrt(vminus)
-    dminus <- (exp(uminus)-exp(lminus))/2
-  }
+  nplus_log <- n.log(rplr,rnlr,powera,powerb,sizea,sizeb,betaa,betab,tpf,fpf,deltaplus,deltaminus,100)$nplus_log
+  nminus_log <- n.log(rplr,rnlr,powera,powerb,sizea,sizeb,betaa,betab,tpf,fpf,deltaplus,deltaminus,100)$nminus_log
+
   res$nplus_log[i] <- nplus_log
   res$nminus_log[i] <- nminus_log
 }
