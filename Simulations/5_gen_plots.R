@@ -52,7 +52,7 @@ f1=
   theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),axis.text.x=element_text(angle=-90))
 
 dev.new()
-pdf("figure_rho0.pdf",width=6.9,height=5.9)
+pdf("output/figure1_rho0.pdf",width=6.9,height=5.9) 
 print(f1)
 dev.off()
 
@@ -70,7 +70,7 @@ f1=
   theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),axis.text.x=element_text(angle=-90))
 
 dev.new()
-pdf("figure_rho06_pow.pdf",width=6.9,height=5.9)
+pdf("output/figure2_rho06_pow.pdf",width=6.9,height=5.9) 
 print(f1)
 dev.off()
 
@@ -88,7 +88,7 @@ f1=
   theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),axis.text.x=element_text(angle=-90))
 
 dev.new()
-pdf("figure_rho06_pen_pow.pdf",width=6.9,height=5.9)
+pdf("output/figure3_rho06_pen_pow.pdf",width=6.9,height=5.9)
 print(f1)
 dev.off()
 
@@ -106,7 +106,7 @@ f1=
   theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),axis.text.x=element_text(angle=-90))
 
 dev.new()
-pdf("figure_rho06_adj_pow.pdf",width=6.9,height=5.9)
+pdf("output/figureA5_rho06_adj_pow.pdf",width=6.9,height=5.9) 
 print(f1)
 dev.off()
 
@@ -139,7 +139,7 @@ f2=
   theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),axis.text.x=element_text(angle=-90),legend.position = "bottom")
 
 dev.new()
-pdf("figure_rho06_lr.pdf",width=13.8,height=5.9)
+pdf("output/figure4_rho06_lr.pdf",width=13.8,height=5.9) 
 grid.newpage()
 pushViewport(viewport(layout = grid.layout(1, 2)))
 print(f1, vp = vplayout(1, 1))
@@ -160,7 +160,7 @@ f1=
   theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),axis.text.x=element_text(angle=-90))
 
 dev.new()
-pdf("figure_rho1_pow.pdf", width=6.9,height=5.9)
+pdf("output/figureA1_rho1_pow.pdf", width=6.9,height=5.9)
 print(f1)
 dev.off()
 
@@ -178,7 +178,7 @@ f1=
   theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),axis.text.x=element_text(angle=-90))
 
 dev.new()
-pdf("figure_rho1_pen_pow.pdf", width=6.9,height=5.9)
+pdf("output/figureA2_rho1_pen_pow.pdf", width=6.9,height=5.9)
 print(f1)
 dev.off()
 
@@ -195,7 +195,7 @@ f1=
   theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),axis.text.x=element_text(angle=-90))
 
 dev.new()
-pdf("figure_rho1_adj_pow.pdf", width=6.9,height=5.9)
+pdf("output/figureA6_rho1_adj_pow.pdf", width=6.9,height=5.9)
 print(f1)
 dev.off()
 
@@ -228,7 +228,7 @@ f2=
   theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),axis.text.x=element_text(angle=-90),legend.position = "bottom")
 
 dev.new()
-pdf("figure_rho1_lr.pdf", width=13.8,height=5.9)
+pdf("output/figureA3_rho1_lr.pdf", width=13.8,height=5.9)
 grid.newpage()
 pushViewport(viewport(layout = grid.layout(1, 2)))
 print(f1, vp = vplayout(1, 1))
@@ -289,7 +289,7 @@ f2=
   theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),axis.text.x=element_text(angle=-90),legend.position = "bottom")
 
 dev.new()
-pdf("figure_rho06_rlr.pdf", width=13.8,height=5.9)
+pdf("output/figure5_rho06_rlr.pdf", width=13.8,height=5.9)
 grid.newpage()
 pushViewport(viewport(layout = grid.layout(1, 2)))
 print(f1, vp = vplayout(1, 1))
@@ -324,7 +324,7 @@ f2=
   theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),axis.text.x=element_text(angle=-90),legend.position = "bottom")
 
 dev.new()
-pdf("figure_rho1_rlr.pdf", width=13.8,height=5.9)
+pdf("output/figureA4_rho1_rlr.pdf", width=13.8,height=5.9)
 grid.newpage()
 pushViewport(viewport(layout = grid.layout(1, 2)))
 print(f1, vp = vplayout(1, 1))
