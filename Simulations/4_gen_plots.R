@@ -5,7 +5,7 @@ setwd("...") # set your working directory
 
 # size, power, penalized power, adjusted power, positive and negative likelihood ratios
 # read-in results
-plotbase <- read.csv("plot_lrs_penpow_adjpow.csv",header=TRUE, sep=",")
+plotbase <- read.csv("simulations/plot_lrs_penpow_adjpow.csv",header=TRUE, sep=",")
 base0 <- plotbase[plotbase$rho==0,]
 base06 <- plotbase[plotbase$rho==-0.6,]
 base1 <- plotbase[plotbase$rho==-1,]
@@ -239,7 +239,7 @@ dev.off()
 
 # relative positive and negative likelihood ratios
 # read-in results
-plotbase2 <- read.csv("plot_rlrs.csv",header=TRUE, sep=",")
+plotbase2 <- read.csv("simulations/plot_rlrs.csv",header=TRUE, sep=",")
 base0_2 <- plotbase2[plotbase2$rho==0,]
 base06_2 <- plotbase2[plotbase2$rho==-0.6,]
 base1_2 <- plotbase2[plotbase2$rho==-1,]
