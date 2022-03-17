@@ -1,5 +1,5 @@
 setwd("...") # set your working directory
-source("2_pp_ap_lrs.R")
+source("1_pp_ap_lrs.R")
 
 n <- 5000
 
