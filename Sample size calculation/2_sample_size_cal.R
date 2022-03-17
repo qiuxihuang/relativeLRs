@@ -196,4 +196,4 @@ names(res) <- c("k","true_OR","tau2","rho","testA","testB","powerA","powerB",
                 "sizeA","sizeB","tpfAB","fpfAB","rplr","rnlr",
                 "n_rplr","n_rnlr","n_log_rplr","n_log_rnlr")
 
-write.csv(res,file=paste0("output/sample_size_all.csv"), row.names = F) # Table A1
+write.csv(res,file=paste0("output/tableA1_sample_size_all.csv"), row.names = F) # Table A1
