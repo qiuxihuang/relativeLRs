@@ -49,6 +49,7 @@ for (k in ntrial){
         tpf.tfc <- sum(tpf.tfc.di)/n
         tpf.cc <- sum(tpf.cc.di)/n
         
+        
         rho0 <- 0
         
         
