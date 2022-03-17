@@ -42,9 +42,13 @@ R code used to present simulation results in plots.
 ```
 R code used to perform 6 different tests for small-study effects on generated meta-analyses and save p-values separately for each scenario with a smaller sample size. Scenarios can be defined at line 14-17. Number of repetitions can be specified at line 19. 
 ```
-2_sample_size_cal.R
+2_n_log_fxn.R
 ```
-R code used to calculate the minimum required sample size to achieve a certain level of relative precision on the relative positive and negative likelihood ratios and present results in table.
+R function used to solve for minimum required number of repetitions numerically based on log-transformed CI of relative likelihood ratios. 
+```
+3_sample_size_cal.R
+```
+R code used to calculate the minimum required sample size to achieve a certain level of relative precision on the relative positive and negative likelihood ratios by using proposed formulas and the numerical method, and present results in table.
 The precision level can be specified at line 130, 134, 169, 170. Nominal level is set at 0.1.  
 ```
 ##### Version information
