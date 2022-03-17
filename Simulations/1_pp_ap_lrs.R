@@ -1,4 +1,4 @@
-# Functions yielding penalized power, adjusted power, positive and negative likelihood ratios
+# Functions taking power and size and yielding penalized power, adjusted power, positive and negative likelihood ratios
 
 pen.pow <- function(power,size){
   pen.pow <- power/sqrt(1+abs(1-size/0.1))
