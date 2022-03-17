@@ -45,5 +45,5 @@ R code used to perform 6 different tests for small-study effects on generated me
 2_sample_size_cal.R
 ```
 R code used to calculate the minimum required sample size to achieve a certain level of relative precision on the relative positive and negative likelihood ratios.
-The precision level can be specified at line 128, 132, 167, 168. Nominal level is set at 0.1.  
+The precision level can be specified at line 129, 133, 168, 169. Nominal level is set at 0.1.  
 ```
