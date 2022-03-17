@@ -126,7 +126,7 @@ for (k in ntrial){
         sample$betab <- 1-sample$powerb
         sample$rplr <- c(rplr.rc,rplr.lc,rplr.thc,rplr.tfc,rplr.cc)
         sample$rnlr <- c(rnlr.rc,rnlr.lc,rnlr.thc,rnlr.tfc,rnlr.cc)
-        # proposed formulas to calculate minimum required sample size based on Wald-type CI
+        # proposed formulas to calculate minimum required sample size based on Wald-type CI of relative likelihood ratios
         sample$nplus <- (1.96/0.1)^2*(sample$betaa/sample$powera+sample$betab/sample$powerb+
                                         (1-sample$sizea)/sample$sizea+(1-sample$sizeb)/sample$sizeb-
                                         2*sample$tpf/sample$powera/sample$powerb-2*sample$fpf/sample$sizea/sample$sizeb+4)
@@ -153,7 +153,7 @@ for (k in ntrial){
 }
 
 res <- res[-1,]
-# solve for number of repetitions numerically based on log-transformed CI, increment = 100
+# solve for number of repetitions numerically based on log-transformed CI of relative likelihood ratios, increment = 100
 for (i in 1:nrow(res)){
   
   rplr <- res$rplr[i]
