@@ -164,13 +164,13 @@ for (i in 1:nrow(res)){
   sizeb <- res$sizeB[i]
   betaa <- 1-powera
   betab <- 1-powerb
-  tpf <- res$tpfAB[i]
-  fpf <- res$fpfAB[i]
+  tpfab <- res$tpfAB[i]
+  fpfab <- res$fpfAB[i]
   deltaplus <- rplr*0.1
   deltaminus <- rnlr*0.1
   
-  nplus_log <- n.log(rplr,rnlr,powera,powerb,sizea,sizeb,betaa,betab,tpf,fpf,deltaplus,deltaminus,100)$nplus_log
-  nminus_log <- n.log(rplr,rnlr,powera,powerb,sizea,sizeb,betaa,betab,tpf,fpf,deltaplus,deltaminus,100)$nminus_log
+  nplus_log <- n.log(rplr,rnlr,powera,powerb,sizea,sizeb,betaa,betab,tpfab,fpfab,deltaplus,deltaminus,100)$nplus_log
+  nminus_log <- n.log(rplr,rnlr,powera,powerb,sizea,sizeb,betaa,betab,tpfab,fpfab,deltaplus,deltaminus,100)$nminus_log
 
   res$nplus_log[i] <- nplus_log
   res$nminus_log[i] <- nminus_log
