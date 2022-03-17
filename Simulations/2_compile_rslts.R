@@ -16,13 +16,13 @@ for (k in ntrial){
     for (tau2 in Tau2){
       for (rho in Rho){
         
-        rslts1 <- read.table(paste0("pval_n_", n1, "_k_", k, "_OR_", OR, "_tau2_", tau2, "_rho_", rho, 
+        rslts1 <- read.table(paste0("simulations/pval_n_", n1, "_k_", k, "_OR_", OR, "_tau2_", tau2, "_rho_", rho, 
                                     ".txt"), header=T, sep="")
-        rslts2 <- read.table(paste0("pval_n_", n2, "_k_", k, "_OR_", OR, "_tau2_", tau2, "_rho_", rho, 
+        rslts2 <- read.table(paste0("simulations/pval_n_", n2, "_k_", k, "_OR_", OR, "_tau2_", tau2, "_rho_", rho, 
                                     ".txt"), header=T, sep="")
         rslts <- rbind(rslts1,rslts2) # build-up to 55,000 repetitions
         write.table(rslts, file =
-                      paste0("pval_n_", n, "_k_", k, "_OR_", OR, "_tau2_", tau2, "_rho_", rho, 
+                      paste0("simulations/pval_n_", n, "_k_", k, "_OR_", OR, "_tau2_", tau2, "_rho_", rho, 
                              ".txt", sep = ""), row.names = FALSE)
       }
     }
@@ -42,7 +42,7 @@ for (k in ntrial){
     for (tau2 in Tau2){
       for (rho in Rho){
         
-        rslts <- read.table(paste0("pval_n_", n, "_k_", k, "_OR_", OR, "_tau2_", tau2, "_rho_", rho, 
+        rslts <- read.table(paste0("simulations/pval_n_", n, "_k_", k, "_OR_", OR, "_tau2_", tau2, "_rho_", rho, 
                                     ".txt"), header=T, sep="")
         # set nominal = 0.1
         rank.power.di<-ifelse(rslts$rank.pval<0.1,1,0)
@@ -67,7 +67,7 @@ for (k in ntrial){
   }
 }
 
-write.csv(power,file=paste0("power_", n, "_results.csv"), row.names = F)
+write.csv(power,file=paste0("simulations/power_", n, "_results.csv"), row.names = F)
 
 
 
@@ -87,7 +87,7 @@ for (k in ntrial){
     for (tau2 in Tau2){
       for (rho in Rho){
         
-        rslts <- read.table(paste0("pval_n_", n, "_k_", k, "_OR_", OR, "_tau2_", tau2, "_rho_", rho, 
+        rslts <- read.table(paste0("simulations/pval_n_", n, "_k_", k, "_OR_", OR, "_tau2_", tau2, "_rho_", rho, 
                                     ".txt"), header=T, sep="")
         # set nominal = 0.1
         rank.size.di<-ifelse(rslts$rank.pval<0.1,1,0)
@@ -112,7 +112,7 @@ for (k in ntrial){
   }
 }
 
-write.csv(size,file=paste0("size_", n, "_results.csv"), row.names = F)
+write.csv(size,file=paste0("simulations/size_", n, "_results.csv"), row.names = F)
 
 
 allrslts <- power %>% left_join(size,by=c("k", "true_OR", "tau2"))
@@ -145,4 +145,4 @@ allrslts$thom.nlr <- nlr(allrslts$thom.power,allrslts$thom.size)
 allrslts$comb.nlr <- nlr(allrslts$comb.power,allrslts$comb.size)
 allrslts$tf.nlr <- nlr(allrslts$tf.power,allrslts$tf.size)
 
-write.csv(allrslts,file=paste0("sim_", n, "_results.csv"),row.names = F)
+write.csv(allrslts,file=paste0("simulations/sim_", n, "_results.csv"),row.names = F)
