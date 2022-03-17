@@ -1,4 +1,4 @@
-# Fuction generating k selected trials using Copas and Shi's model
+# Function generating k selected trials using Copas and Shi's model
 
 gen_meta<-function(k,true_OR, tau2,rho){
   base <- data.frame(matrix(nrow=k, ncol=21)) 
