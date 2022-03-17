@@ -22,7 +22,7 @@ for (k in ntrial){
         
         rslts <- read.table(paste0("pval_n_", n, "_k_", k, "_OR_", OR, "_tau2_", tau2, "_rho_", rho, 
                                    ".txt"), header=T, sep="")
-        
+        # set nominal = 0.1
         rank.power.di<-ifelse(rslts$rank.pval<0.1,1,0)
         linreg.power.di<- ifelse(rslts$linreg.pval<0.1,1,0)
         thom.power.di<-ifelse(rslts$thom.pval<0.1,1,0)
@@ -54,7 +54,7 @@ for (k in ntrial){
         
         rslts <- read.table(paste0("pval_n_", n, "_k_", k, "_OR_", OR, "_tau2_", tau2, "_rho_", rho0, 
                                    ".txt"), header=T, sep="")
-        
+        # set nominal = 0.1
         rank.size.di<-ifelse(rslts$rank.pval<0.1,1,0)
         linreg.size.di<- ifelse(rslts$linreg.pval<0.1,1,0)
         thom.size.di<-ifelse(rslts$thom.pval<0.1,1,0)
