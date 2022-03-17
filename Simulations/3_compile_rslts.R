@@ -36,6 +36,7 @@ names(power) <- c("k","true_OR","tau2","rho",
 
 scenario <- 0
 
+
 for (k in ntrial){
   for (OR in true_or){
     for (tau2 in Tau2){
