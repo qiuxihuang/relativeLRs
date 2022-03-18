@@ -1,7 +1,7 @@
-In this project, we share R code to conduct Monte Carlo simulation studies to compare 6 different tests for small-study effects: 
-Begg’s rank correlation test, Egger’s regression test, Schwarzer’s rank correlation test, the trim-and-fill test, the arcsine-Thompson test, and the skewness-regression combined test introduced by Lin and Chu. We also share code to jusitify the minimum required number of repetitions in our simulations to obtain a desired level of precision on the relative positive and negative likelihood ratios. 
+In this project, we provide R functions to calculate positive and negative likelihood ratios that incorporate both power and size in simulation studies comparing the performance two or more statistical tests of the same null hypothesis. We also share code to calculate the minimum number of repetitions to obtain a desired level of precision on the relative positive and negative likelihood ratios. Finally, we share R code to replicate Monte Carlo simulation studies comparing 6 tests for small-study effects in meta-analysis of randomized trials, in which we illustrate the proposed approach based on likelihood ratios and compare it to power adjusted, or penalized, for empirical size.
+ 
 
-### Simulations
+### Sample size calculation
 
 0_gen_meta.R
 ```
@@ -15,13 +15,38 @@ R function used to perform the trim-and-fill test.
 ```
 R function used to perform Lin and Chu's skewness-regression combined test. 
 ```
-1_sim_meta.R
+1_sim_sample_size.R
 ```
-R code used to perform 6 different tests for small-study effects on generated meta-analyses and save p-values separately for each scenario. Scenarios can be defined at line 14-17. Number of repetitions can be specified at line 19. 
+R code used to perform 6 different tests for small-study effects on generated meta-analyses and save p-values separately for each scenario with a smaller sample size. Scenarios can be defined at line 14-17. Number of repetitions can be specified at line 19. 
 ```
 1_pp_ap_lrs.R
 ```
 R function used to calculate penalized power, adjusted power, and likelihood ratios. 
+```
+2_n_log_fxn.R
+```
+R function used to solve for minimum required number of repetitions numerically based on log-transformed CI of relative likelihood ratios. 
+```
+3_sample_size_cal.R
+```
+R code used to calculate the minimum required sample size to achieve a certain level of relative precision on the relative positive and negative likelihood ratios by using proposed formulas and the numerical method, and present results in table.
+The precision level can be specified at line 130, 134, 169, 170. Nominal level is set at 0.1.  
+```
+
+### Simulations
+
+1_sim_meta.R
+```
+R code used to perform 6 different tests for small-study effects on generated meta-analyses and save p-values separately for each scenario. Scenarios can be defined at line 14-17. Number of repetitions can be specified at line 19. 
+```
+2_n_log_fxn.R
+```
+R function used to solve for minimum required number of repetitions numerically based on log-transformed CI of relative likelihood ratios. 
+```
+3_sample_size_cal.R
+```
+R code used to calculate the minimum required sample size to achieve a certain level of relative precision on the relative positive and negative likelihood ratios by using proposed formulas and the numerical method, and present results in table.
+The precision level can be specified at line 130, 134, 169, 170. Nominal level is set at 0.1.  
 ```
 2_compile_rslts.R
 ```
@@ -36,21 +61,6 @@ R code used to prepare simulation results for making plots.
 R code used to present simulation results in plots.  
 ```
 
-### Sample size calculation
-
-1_sim_sample_size.R
-```
-R code used to perform 6 different tests for small-study effects on generated meta-analyses and save p-values separately for each scenario with a smaller sample size. Scenarios can be defined at line 14-17. Number of repetitions can be specified at line 19. 
-```
-2_n_log_fxn.R
-```
-R function used to solve for minimum required number of repetitions numerically based on log-transformed CI of relative likelihood ratios. 
-```
-3_sample_size_cal.R
-```
-R code used to calculate the minimum required sample size to achieve a certain level of relative precision on the relative positive and negative likelihood ratios by using proposed formulas and the numerical method, and present results in table.
-The precision level can be specified at line 130, 134, 169, 170. Nominal level is set at 0.1.  
-```
 ##### Version information
 ```
 R version 4.0.2 (2020-06-22)
