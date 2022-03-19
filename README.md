@@ -18,7 +18,7 @@ R function used to perform Lin and Chu's skewness-regression combined test.
 ```
 R code used to perform 6 different tests for small-study effects on generated meta-analyses and save p-values separately for each scenario. Scenarios can be defined at line 14-17. Number of repetitions can be specified at line 19. 
 ```
-1_pp_ap_lrs.R
+1_lrs_fxn.R
 ```
 R function used to calculate penalized power, adjusted power, and likelihood ratios. 
 ```
