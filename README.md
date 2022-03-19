@@ -28,7 +28,7 @@ R code used to compile all simulation results. Nominal level is set at 0.1.
 ```
 3_for_plots.R
 ```
-R code used to prepare simulation results for making plots.
+R code used to prepare simulation results for creating plots.
 ```
 4_gen_plots.R
 ```
