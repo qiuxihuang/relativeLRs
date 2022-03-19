@@ -1,6 +1,6 @@
 library(dplyr)
 setwd("...") # set your working directory
-source("1_pp_ap_lrs.R")
+source("1_lrs_fxn.R")
 
 ntrial <- c(5,10,20,50)
 true_or <- c(0.25,0.5,0.67,1)
