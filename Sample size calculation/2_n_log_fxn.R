@@ -4,7 +4,7 @@
 # Sample size increases by inc each time until the required precision is obtained
 # Returns minimum number of repetitions based on relative positive and negative likelihood ratios respectively
 
-n.log <- function(rplr,rnlr,powera,powerb,sizea,sizeb,tpfab,fpfab,drplr,drnlr,inc){
+n.log.rlr <- function(rplr,rnlr,powera,powerb,sizea,sizeb,tpfab,fpfab,drplr,drnlr,inc){
   
   dplus <- dminus <- 999
   nplus_log <- nminus_log <- 0
