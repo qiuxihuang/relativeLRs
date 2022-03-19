@@ -36,7 +36,7 @@ R code used to present simulation results in plots.
 ```
 ### Sample size calculation
 
-2_n_log_fxn.R
+2_n_logrlr_fxn.R
 ```
 R function used to solve for minimum required number of repetitions numerically based on log-transformed CI of relative likelihood ratios. 
 ```
