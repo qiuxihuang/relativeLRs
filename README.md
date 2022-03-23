@@ -20,7 +20,7 @@ R code used to perform 6 different tests for small-study effects on generated me
 ```
 1_lrs_fxn.R
 ```
-R function used to calculate penalized power, adjusted power, and likelihood ratios. 
+R function used to calculate penalized power, adjusted power, and likelihood ratios at a specified nominal level. 
 ```
 2_compile_rslts.R
 ```
