@@ -117,32 +117,32 @@ write.csv(size,file=paste0("simulations/size_", n, "_results.csv"), row.names = 
 
 allrslts <- power %>% left_join(size,by=c("k", "true_OR", "tau2"))
 # penalized power
-allrslts$rank.pen_pow <- lrs.pp.ap(allrslts$rank.power,allrslts$rank.size)$pen.pow
-allrslts$linreg.pen_pow <- lrs.pp.ap(allrslts$linreg.power,allrslts$linreg.size)$pen.pow
-allrslts$count.pen_pow <- lrs.pp.ap(allrslts$count.power,allrslts$count.size)$pen.pow
-allrslts$thom.pen_pow <- lrs.pp.ap(allrslts$thom.power,allrslts$thom.size)$pen.pow
-allrslts$comb.pen_pow <- lrs.pp.ap(allrslts$comb.power,allrslts$comb.size)$pen.pow
-allrslts$tf.pen_pow <- lrs.pp.ap(allrslts$tf.power,allrslts$tf.size)$pen.pow
+allrslts$rank.pen_pow <- lrs.pp.ap(allrslts$rank.power,allrslts$rank.size,0.1)$pen.pow
+allrslts$linreg.pen_pow <- lrs.pp.ap(allrslts$linreg.power,allrslts$linreg.size,0.1)$pen.pow
+allrslts$count.pen_pow <- lrs.pp.ap(allrslts$count.power,allrslts$count.size,0.1)$pen.pow
+allrslts$thom.pen_pow <- lrs.pp.ap(allrslts$thom.power,allrslts$thom.size,0.1)$pen.pow
+allrslts$comb.pen_pow <- lrs.pp.ap(allrslts$comb.power,allrslts$comb.size,0.1)$pen.pow
+allrslts$tf.pen_pow <- lrs.pp.ap(allrslts$tf.power,allrslts$tf.size,0.1)$pen.pow
 # adjusted power
-allrslts$rank.adj_pow <- lrs.pp.ap(allrslts$rank.power,allrslts$rank.size)$adj.pow
-allrslts$linreg.adj_pow <- lrs.pp.ap(allrslts$linreg.power,allrslts$linreg.size)$adj.pow
-allrslts$count.adj_pow <- lrs.pp.ap(allrslts$count.power,allrslts$count.size)$adj.pow
-allrslts$thom.adj_pow <- lrs.pp.ap(allrslts$thom.power,allrslts$thom.size)$adj.pow
-allrslts$comb.adj_pow <- lrs.pp.ap(allrslts$comb.power,allrslts$comb.size)$adj.pow
-allrslts$tf.adj_pow <- lrs.pp.ap(allrslts$tf.power,allrslts$tf.size)$adj.pow
+allrslts$rank.adj_pow <- lrs.pp.ap(allrslts$rank.power,allrslts$rank.size,0.1)$adj.pow
+allrslts$linreg.adj_pow <- lrs.pp.ap(allrslts$linreg.power,allrslts$linreg.size,0.1)$adj.pow
+allrslts$count.adj_pow <- lrs.pp.ap(allrslts$count.power,allrslts$count.size,0.1)$adj.pow
+allrslts$thom.adj_pow <- lrs.pp.ap(allrslts$thom.power,allrslts$thom.size,0.1)$adj.pow
+allrslts$comb.adj_pow <- lrs.pp.ap(allrslts$comb.power,allrslts$comb.size,0.1)$adj.pow
+allrslts$tf.adj_pow <- lrs.pp.ap(allrslts$tf.power,allrslts$tf.size,0.1)$adj.pow
 # positive likelihood ratio
-allrslts$rank.plr <- lrs.pp.ap(allrslts$rank.power,allrslts$rank.size)$plr
-allrslts$linreg.plr <- lrs.pp.ap(allrslts$linreg.power,allrslts$linreg.size)$plr
-allrslts$count.plr <- lrs.pp.ap(allrslts$count.power,allrslts$count.size)$plr
-allrslts$thom.plr <- lrs.pp.ap(allrslts$thom.power,allrslts$thom.size)$plr
-allrslts$comb.plr <- lrs.pp.ap(allrslts$comb.power,allrslts$comb.size)$plr
-allrslts$tf.plr <- lrs.pp.ap(allrslts$tf.power,allrslts$tf.size)$plr
+allrslts$rank.plr <- lrs.pp.ap(allrslts$rank.power,allrslts$rank.size,0.1)$plr
+allrslts$linreg.plr <- lrs.pp.ap(allrslts$linreg.power,allrslts$linreg.size,0.1)$plr
+allrslts$count.plr <- lrs.pp.ap(allrslts$count.power,allrslts$count.size,0.1)$plr
+allrslts$thom.plr <- lrs.pp.ap(allrslts$thom.power,allrslts$thom.size,0.1)$plr
+allrslts$comb.plr <- lrs.pp.ap(allrslts$comb.power,allrslts$comb.size,0.1)$plr
+allrslts$tf.plr <- lrs.pp.ap(allrslts$tf.power,allrslts$tf.size,0.1)$plr
 # negative likelihood ratio
-allrslts$rank.nlr <- lrs.pp.ap(allrslts$rank.power,allrslts$rank.size)$nlr
-allrslts$linreg.nlr <- lrs.pp.ap(allrslts$linreg.power,allrslts$linreg.size)$nlr
-allrslts$count.nlr <- lrs.pp.ap(allrslts$count.power,allrslts$count.size)$nlr
-allrslts$thom.nlr <- lrs.pp.ap(allrslts$thom.power,allrslts$thom.size)$nlr
-allrslts$comb.nlr <- lrs.pp.ap(allrslts$comb.power,allrslts$comb.size)$nlr
-allrslts$tf.nlr <- lrs.pp.ap(allrslts$tf.power,allrslts$tf.size)$nlr
+allrslts$rank.nlr <- lrs.pp.ap(allrslts$rank.power,allrslts$rank.size,0.1)$nlr
+allrslts$linreg.nlr <- lrs.pp.ap(allrslts$linreg.power,allrslts$linreg.size,0.1)$nlr
+allrslts$count.nlr <- lrs.pp.ap(allrslts$count.power,allrslts$count.size,0.1)$nlr
+allrslts$thom.nlr <- lrs.pp.ap(allrslts$thom.power,allrslts$thom.size,0.1)$nlr
+allrslts$comb.nlr <- lrs.pp.ap(allrslts$comb.power,allrslts$comb.size,0.1)$nlr
+allrslts$tf.nlr <- lrs.pp.ap(allrslts$tf.power,allrslts$tf.size,0.1)$nlr
 
 write.csv(allrslts,file=paste0("simulations/sim_", n, "_results.csv"),row.names = F)
