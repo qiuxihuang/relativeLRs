@@ -82,19 +82,19 @@ for (k in ntrial){
         fpf.tfc <- sum(fpf.tfc.di)/n
         fpf.cc <- sum(fpf.cc.di)/n
         
-        rank.plr <- lrs.pp.ap(rank.power, rank.size)$plr
-        linreg.plr <- lrs.pp.ap(linreg.power, linreg.size)$plr
-        thom.plr <- lrs.pp.ap(thom.power, thom.size)$plr
-        tf.plr <- lrs.pp.ap(tf.power, tf.size)$plr
-        comb.plr <- lrs.pp.ap(comb.power, comb.size)$plr
-        count.plr <- lrs.pp.ap(count.power, count.size)$plr
+        rank.plr <- lrs.pp.ap(rank.power, rank.size, 0.1)$plr
+        linreg.plr <- lrs.pp.ap(linreg.power, linreg.size, 0.1)$plr
+        thom.plr <- lrs.pp.ap(thom.power, thom.size, 0.1)$plr
+        tf.plr <- lrs.pp.ap(tf.power, tf.size, 0.1)$plr
+        comb.plr <- lrs.pp.ap(comb.power, comb.size, 0.1)$plr
+        count.plr <- lrs.pp.ap(count.power, count.size, 0.1)$plr
         
-        rank.nlr <- lrs.pp.ap(rank.power, rank.size)$nlr
-        linreg.nlr <- lrs.pp.ap(linreg.power, linreg.size)$nlr
-        thom.nlr <- lrs.pp.ap(thom.power, thom.size)$nlr
-        tf.nlr <- lrs.pp.ap(tf.power, tf.size)$nlr
-        comb.nlr <- lrs.pp.ap(comb.power, comb.size)$nlr
-        count.nlr <- lrs.pp.ap(count.power, count.size)$nlr
+        rank.nlr <- lrs.pp.ap(rank.power, rank.size, 0.1)$nlr
+        linreg.nlr <- lrs.pp.ap(linreg.power, linreg.size, 0.1)$nlr
+        thom.nlr <- lrs.pp.ap(thom.power, thom.size, 0.1)$nlr
+        tf.nlr <- lrs.pp.ap(tf.power, tf.size, 0.1)$nlr
+        comb.nlr <- lrs.pp.ap(comb.power, comb.size, 0.1)$nlr
+        count.nlr <- lrs.pp.ap(count.power, count.size, 0.1)$nlr
         
         rplr.rc <- rank.plr/count.plr
         rplr.lc <- linreg.plr/count.plr
