@@ -52,7 +52,7 @@ f1=
   theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),axis.text.x=element_text(angle=-90))
 
 dev.new()
-pdf("output/figure1_rho0.pdf",width=6.9,height=5.9) 
+pdf("output/figure2_rho0.pdf",width=6.9,height=5.9) 
 print(f1)
 dev.off()
 
@@ -70,7 +70,7 @@ f1=
   theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),axis.text.x=element_text(angle=-90))
 
 dev.new()
-pdf("output/figure2_rho06_pow.pdf",width=6.9,height=5.9) 
+pdf("output/figure3_rho06_pow.pdf",width=6.9,height=5.9) 
 print(f1)
 dev.off()
 
@@ -88,7 +88,7 @@ f1=
   theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),axis.text.x=element_text(angle=-90))
 
 dev.new()
-pdf("output/figure3_rho06_pen_pow.pdf",width=6.9,height=5.9)
+pdf("output/figure4_rho06_pen_pow.pdf",width=6.9,height=5.9)
 print(f1)
 dev.off()
 
@@ -139,7 +139,7 @@ f2=
   theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),axis.text.x=element_text(angle=-90),legend.position = "bottom")
 
 dev.new()
-pdf("output/figure4_rho06_lr.pdf",width=13.8,height=5.9) 
+pdf("output/figure5_rho06_lr.pdf",width=13.8,height=5.9) 
 grid.newpage()
 pushViewport(viewport(layout = grid.layout(1, 2)))
 print(f1, vp = vplayout(1, 1))
@@ -289,7 +289,7 @@ f2=
   theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),axis.text.x=element_text(angle=-90),legend.position = "bottom")
 
 dev.new()
-pdf("output/figure5_rho06_rlr.pdf", width=13.8,height=5.9)
+pdf("output/figure6_rho06_rlr.pdf", width=13.8,height=5.9)
 grid.newpage()
 pushViewport(viewport(layout = grid.layout(1, 2)))
 print(f1, vp = vplayout(1, 1))
@@ -333,3 +333,19 @@ dev.off()
 
 
 
+pdf("output/figure1_explore_lrs.pdf",width=14.8,height=5.9)
+
+lrplus <- function(alpha, power){ power/alpha }
+lrminus <- function(alpha, power){ (1-power)/(1-alpha) }
+
+par(mfrow=c(1,2))
+
+x <-seq(0.01,0.2,0.001)
+y <-seq(0.01,1,0.001)
+z <- outer(x,y,lrplus)
+contour(x, y, z, levels=c(1,2,3,4,5,10,20,30,40,50), log="x", xlab="Size", ylab="Power")
+
+z <- outer(x,y,lrminus)
+contour(x, y, z, levels=c(1,0.9,0.8,0.7,0.6,0.5,0.4,0.3,0.2,0.1),log="x", xlab="Size", ylab="Power")
+
+dev.off()
