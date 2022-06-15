@@ -338,7 +338,7 @@ pdf("output/figure1_explore_lrs.pdf",width=14.8,height=5.9)
 lrplus <- function(alpha, power){ power/alpha }
 lrminus <- function(alpha, power){ (1-power)/(1-alpha) }
 
-par(mfrow=c(1,2))
+par(mfrow=c(1,2),las=1)
 
 x <-seq(0.01,0.2,0.001)
 y <-seq(0.01,1,0.001)
