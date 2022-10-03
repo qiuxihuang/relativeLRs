@@ -355,10 +355,10 @@ par(mfrow=c(1,2),las=1)
 x <-seq(0.01,0.2,0.001)
 y <-seq(0.01,1,0.001)
 z <- outer(x,y,lrplus)
-contour(x, y, z, levels=c(1,2,3,4,5,10,20,30,40,50), log="x", xlab="Size", ylab="Power", labcex = 0.6)
+contour(x, y, z, levels=c(1,2,3,4,5,10,20,30,40,50), log="x", xlab="Size", ylab="Power", labcex = 0.6, lwd=1, drawlabels = F)
 
 z <- outer(x,y,lrminus)
-contour(x, y, z, levels=c(1,0.9,0.8,0.7,0.6,0.5,0.4,0.3,0.2,0.1),log="x", xlab="Size", ylab="Power", labcex = 0.6)
+contour(x, y, z, levels=c(1,0.9,0.8,0.7,0.6,0.5,0.4,0.3,0.2,0.1),log="x", xlab="Size", ylab="Power", labcex = 0.6, lwd=1, drawlabels = F)
 
 dev.off()
 
