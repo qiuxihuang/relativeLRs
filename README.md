@@ -19,9 +19,13 @@ R function used to perform the trim-and-fill test.
 ```
 R function used to perform Lin and Chu's skewness-regression combined test. 
 ```
+##### 0_write_scenarios
+```
+R script used to create a table for all the considered scenarios.
+```
 ##### 1_sim_meta.R
 ```
-R code used to perform 6 different tests for small-study effects on generated meta-analyses and save p-values separately for each scenario. Scenarios can be defined at line 13-16. Number of repetitions can be specified at line 18. 
+R script used to perform 6 different tests for small-study effects on generated meta-analyses and save p-values separately for each scenario. Scenarios can be defined at line 13-16. Number of repetitions can be specified at line 18. 
 ```
 ##### 1_lrs_fxn.R
 ```
@@ -29,15 +33,15 @@ R function used to calculate penalized power, adjusted power, and likelihood rat
 ```
 ##### 2_compile_rslts.R
 ```
-R code used to compile all simulation results. Nominal level is set at 0.1. 
+R script used to compile all simulation results. Nominal level is set at 0.1. 
 ```
 ##### 3_for_plots.R
 ```
-R code used to prepare simulation results for creating plots.
+R script used to prepare simulation results for creating plots.
 ```
 ##### 4_gen_plots.R
 ```
-R code used to present simulation results in plots.  
+R script used to present simulation results in plots.  
 ```
 #### Sample size calculation
 
@@ -51,7 +55,7 @@ R function used to solve for minimum required number of repetitions numerically 
 ```
 ##### 3_sample_size_cal.R
 ```
-R code used to calculate the minimum required sample size to achieve a certain level of relative precision on the relative positive and negative likelihood ratios by using the proposed closed-formed formulas and the numerical method, and present results in table.
+R script used to calculate the minimum required sample size to achieve a certain level of relative precision on the relative positive and negative likelihood ratios by using the proposed closed-formed formulas and the numerical method, and present results in table.
 The precision level can be specified at line 154 and 161. Nominal level is set at 0.1.  
 ```
 #### Version information
