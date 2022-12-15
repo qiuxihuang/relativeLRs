@@ -1,56 +1,55 @@
 In this project, we provide R functions to calculate positive and negative likelihood ratios that incorporate both power and size in simulation studies comparing the performance two or more statistical tests of the same null hypothesis. We also share code to calculate the minimum number of repetitions to obtain a desired level of precision on the relative positive and negative likelihood ratios. Finally, we share R code to replicate Monte Carlo simulation studies comparing 6 tests for small-study effects in meta-analysis of randomized trials, in which we illustrate the proposed approach based on likelihood ratios and compare it to power adjusted, or penalized, for empirical size.
 
-
-master.R
+#### master.R
 ```
 Master script to set working directory and source subordinate R scripts.
-Please note that '1_sim_meta.R' requires deprecated package versions for meta and metafor to run. 
+Please notice that '1_sim_meta.R' requires deprecated package versions for 'meta' and 'metafor' to run. 
 ``` 
 #### Simulations
 
-0_gen_meta.R
+##### 0_gen_meta.R
 ```
 R function used to generate data of meta-analyses of randomized trials using Copas and Shi's model.
 ```
-0_tnf.R
+##### 0_tnf.R
 ```
 R function used to perform the trim-and-fill test. 
 ```
-0_skewtest.R
+##### 0_skewtest.R
 ```
 R function used to perform Lin and Chu's skewness-regression combined test. 
 ```
-1_sim_meta.R
+##### 1_sim_meta.R
 ```
 R code used to perform 6 different tests for small-study effects on generated meta-analyses and save p-values separately for each scenario. Scenarios can be defined at line 13-16. Number of repetitions can be specified at line 18. 
 ```
-1_lrs_fxn.R
+##### 1_lrs_fxn.R
 ```
 R function used to calculate penalized power, adjusted power, and likelihood ratios at a specified nominal level. 
 ```
-2_compile_rslts.R
+##### 2_compile_rslts.R
 ```
 R code used to compile all simulation results. Nominal level is set at 0.1. 
 ```
-3_for_plots.R
+##### 3_for_plots.R
 ```
 R code used to prepare simulation results for creating plots.
 ```
-4_gen_plots.R
+##### 4_gen_plots.R
 ```
 R code used to present simulation results in plots.  
 ```
 #### Sample size calculation
 
-1_n_rlr_fxn.R
+##### 1_n_rlr_fxn.R
 ```
 R function used to solve for minimum required number of repetitions based on proposed closed-formed formulas. 
 ```
-2_n_logrlr_fxn.R
+##### 2_n_logrlr_fxn.R
 ```
 R function used to solve for minimum required number of repetitions numerically based on log-transformed CI of relative likelihood ratios. 
 ```
-3_sample_size_cal.R
+##### 3_sample_size_cal.R
 ```
 R code used to calculate the minimum required sample size to achieve a certain level of relative precision on the relative positive and negative likelihood ratios by using the proposed closed-formed formulas and the numerical method, and present results in table.
 The precision level can be specified at line 154 and 161. Nominal level is set at 0.1.  
