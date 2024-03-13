@@ -55,7 +55,7 @@ R function used to solve for minimum required number of repetitions numerically 
 ```
 ##### 3_sample_size_cal.R
 ```
-R script used to calculate the minimum required sample size to achieve a certain level of relative precision on the relative positive and negative likelihood ratios by using the proposed closed-formed formulas and the numerical method, and present results in table.
+R script used to calculate the minimum required sample size to achieve a certain level of relative precision on the relative positive and negative likelihood ratios by using the proposed closed formulas and the numerical method, and present results in table.
 The precision level can be specified at line 154 and 161. Nominal level is set at 0.1.  
 ```
 #### Version information
