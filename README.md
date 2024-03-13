@@ -47,7 +47,7 @@ R script used to present simulation results in plots.
 
 ##### 1_n_rlr_fxn.R
 ```
-R function used to solve for minimum required number of repetitions based on proposed closed-formed formulas. 
+R function used to solve for minimum required number of repetitions based on proposed closed formulas. 
 ```
 ##### 2_n_logrlr_fxn.R
 ```
