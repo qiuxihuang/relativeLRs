@@ -1,4 +1,4 @@
-# Function to calculate the minimum required sample size based on the proposed closed-formed formulas
+# Function to calculate the minimum required sample size based on the proposed closed formulas
 # Takes estimated power and size of the two tests, as well as TPFab, FPFab, and the required relative precision
 # 'drplr' and 'drnlr' are relative precision on relative positive and negative likelihood ratios respectively
 # Returns minimum number of repetitions based on relative positive and negative likelihood ratios respectively
